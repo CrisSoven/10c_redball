@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    public AudioSource coin;
+
+    public AudioSource audioMoneda;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
-        {
-            Debug.Log("xd");    
-            coin.PlayOneShot(coin.clip);
+        { 
+            audioMoneda.PlayOneShot(audioMoneda.clip);
             Destroy(this.gameObject);
         }
     }
